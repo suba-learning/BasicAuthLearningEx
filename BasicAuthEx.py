@@ -5,7 +5,7 @@ import requests
 
 baseurl = "https://api.github.com/user"
 username = "@suba-learning"
-token = "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"
+token = "xxxxx"
 
 
 #Get userinfo without the token
@@ -19,7 +19,7 @@ print("Status: ",response.status_code)
 print(response.json())
 
 #Get User info with incorrect authkey
-response = requests.get(baseurl, auth=(username,"ghp_SH6d0dWeD4a1PDTytPaJSdqmQCeF9q2W"))
+response = requests.get(baseurl, auth=(username,"xxxx"))
 print("Status: ",response.status_code)
 print(response.json())
 
@@ -48,6 +48,5 @@ headers= {
     "Accept":"application/vnd.github+json"
 }
 response = requests.post(baseurl, auth=(username,token), data=json.dumps(payload))
-print("********")
 print("Status: ",response.status_code)
 print(response.json())
